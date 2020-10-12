@@ -2,6 +2,8 @@
 
 This is a very simple library to generate ***SELECT***  queries in SQL SERVER. It is possible generate queries with many columns, prefix, many possibles where´s clause, parameters and more. :v: :wink:
 
+_Package write in C#, framework .Net 4.8_
+
 ## Comments:
 
 Adapted from the original design for use with a firebird database.
@@ -9,7 +11,6 @@ Tested with Firebird 2.5 and changed the framework to 4.6.1.
 Original design and credits for:
 https://github.com/leandrovip/Vip.SqlQuery
 
-_Package write in C#, framework .Net 4.8_
 
 ## How to use ?
 
