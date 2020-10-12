@@ -8,7 +8,7 @@ namespace Vip.SqlQuery.Tests.Clauses
         public void From_With_Select()
         {
             // Arrange
-            var queryExpected = "SELECT [ProdutoId], [Descricao], [Codigo] FROM [Produto]";
+            var queryExpected = "SELECT ProdutoId, Descricao, Codigo FROM Produto";
 
             // Act
             var query = SqlQuery.New()
@@ -25,7 +25,7 @@ namespace Vip.SqlQuery.Tests.Clauses
         public void From_With_Prefix()
         {
             // Arrange
-            const string queryExpected = "SELECT [ProdutoId], [Descricao] FROM [Produto] [p]";
+            const string queryExpected = "SELECT ProdutoId, Descricao FROM Produto p";
 
             // Act
             var query = SqlQuery.New()

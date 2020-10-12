@@ -41,7 +41,7 @@ namespace Vip.SqlQuery.Clause
                     => (sb.Length == 0
                             ? sb
                             : sb.Append(", "))
-                        .Append(!prefix.IsNullOrEmpty() ? $"[{prefix}]." : "")
+                        .Append(!prefix.IsNullOrEmpty() ? $"{prefix}." : "")
                         .Append(Helper.ColumnName(x)))
                 .ToString();
         }

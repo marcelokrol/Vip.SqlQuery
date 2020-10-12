@@ -19,7 +19,7 @@ namespace Vip.SqlQuery.Utils
 
             var values = table.Split(' ');
 
-            return values.Length > 1 ? $"[{values[0]}] [{values[1]}]" : $"[{values[0]}]";
+            return values.Length > 1 ? $"{values[0]} {values[1]}" : values[0];
         }
 
         public static string ColumnName(string column)
@@ -43,7 +43,7 @@ namespace Vip.SqlQuery.Utils
             }
             else
             {
-                nameColumn = !column.IsNullOrEmpty() ? $"[{column}]" : "*";
+                nameColumn = !column.IsNullOrEmpty() ? $"{column}" : "*";
             }
 
             return nameColumn;
@@ -56,10 +56,10 @@ namespace Vip.SqlQuery.Utils
 
         private static string BuildColumnDot(string column)
         {
-            if (!column.Contains(".")) return $"[{column}]";
+            if (!column.Contains(".")) return column;
 
             var values = column.Split('.');
-            return values.Length > 1 ? $"[{values[0]}].[{values[1]}]" : $"[{values[0]}]";
+            return values.Length > 1 ? $"{values[0]}.{values[1]}" : values[0];
         }
 
         private static string BuildPrefixAlias(string column)
